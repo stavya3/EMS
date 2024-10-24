@@ -1,14 +1,16 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
-const Login = () => {
+
+
+const Login = ({handleLogin}: any) => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const submitHandler = (e: any) => {
     e.preventDefault();
-    console.log("Email is",email);
-    console.log("Password is",password);
+    handleLogin(email,password); // well this is interesting, you pass data (email and password) from child(here) to parent(App.tsx)
+
     setEmail("");
     setPassword("");
   }

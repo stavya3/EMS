@@ -2,16 +2,16 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
-import AuthContext from './context/AuthContext.tsx'
-import TaskContext from './context/TaskContext.tsx'
+import AuthProvider from './context/AuthProvider.tsx'
+
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <AuthContext>
-      <TaskContext>
-        <App />
-      </TaskContext>
-    </AuthContext>
+    <AuthProvider>
+      <App />
+    </AuthProvider>
+      
+
   
   </StrictMode>,
 )
