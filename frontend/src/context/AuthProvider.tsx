@@ -6,7 +6,7 @@ export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
 
     const [userData, setUserData] = useState(null);
-    setUserData(getLocalStorage());
+    const { employee:any, admin:any } = getLocalStorage();
   return (
     <div>
         <AuthContext.Provider value={"Stavya"}>
